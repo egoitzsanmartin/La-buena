@@ -19,6 +19,8 @@ int main(int argc, char* argv[])
 			batura = batura + zatitzailea;
 		}
 	}
+    
+	//oboe
 
 	if (batura == n)
 	{

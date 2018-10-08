@@ -1,0 +1,36 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main(int argc, char* argv[])
+{
+	int n, zatitzailea = 1, batura = 1;
+	char str[128];
+
+	printf("Sartu zenbaki bat. ");
+	fgets(str, 128, stdin);
+	sscanf(str, "%d", &n);
+
+	while (zatitzailea <= n / 2)
+	{
+		zatitzailea++;
+
+		if (n % zatitzailea == 0)
+		{
+			batura = batura + zatitzailea;
+		}
+	}
+
+	if (batura == n)
+	{
+		printf("Sartu duzun zenbakia perfektua da.\n");
+	}
+
+	else
+	{
+		printf("Sartu duzun zenbakia ez da perfektua.\n");
+	}
+
+	printf("Sakatu \"return\" amaitzeko ");
+	fgets(str, 128, stdin);
+	return 0;
+}
